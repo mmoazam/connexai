@@ -9,7 +9,6 @@ test.describe('Verify Athena Products in Left SubMenu', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('https://connex.ai/uk/');
     await page.locator('#menuArea').getByText('AI Platform', { exact: true }).click();
-    await page.getByRole('heading', { name: 'Our AI Platform' }).click(); 
   });
 
   test('Each Athena product is displayed in the left subMenu', async ({ page }) => {
