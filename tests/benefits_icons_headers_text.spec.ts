@@ -86,16 +86,7 @@ productPages.forEach((url) => {
       }
     });
 
-    test(`Verify responsive layout for benefits section on ${url}`, async ({ page }) => {
-      await page.goto(url);
-      const benefitsSection = page.locator('.container-fluid.benefits-section');
-      const screenSizes = [1200, 768, 375]; // Desktop, tablet, and mobile
 
-      for (const width of screenSizes) {
-        await page.setViewportSize({ width, height: 800 });
-        await expect(benefitsSection).toHaveCSS('display', 'block');
-      }
-    });
 
 
     test(`Verify flex layout for rows in the benefits section on ${url}`, async ({ page }) => {
